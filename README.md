@@ -111,3 +111,12 @@ python train_v42_diamond.py
     • titan_v42_ssl.pth — Веса после SSL.
     • v42_backbone_foldX.pth — Финальные веса.
     • submission_v42.csv — Файл для отправки.
+
+![5](https://github.com/user-attachments/assets/86b288b0-42f0-4f59-a485-072a04772c6b)
+![4](https://github.com/user-attachments/assets/d56207ec-bcbe-4e17-a73e-6b5a192d42b9)
+![3](https://github.com/user-attachments/assets/9a1a2397-ef88-454b-bd71-97a417e0cc1c)
+![2](https://github.com/user-attachments/assets/8ce3d38c-6d96-4aab-8061-0f5216e9e6f9)
+![1](https://github.com/user-attachments/assets/d2877698-33d4-49d0-a3f6-cc79f53a275f)
+
+
+
