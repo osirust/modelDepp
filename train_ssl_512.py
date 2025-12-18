@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")
 
 CONFIG = {
     'seed': 3407,
-    'img_size': 512,
+    'img_size': 384,
     'batch_size': 8,
     'accum_steps': 4,
     'ssl_epochs': 50,
@@ -148,7 +148,7 @@ if __name__ == '__main__':
 
     scaler = GradScaler()
 
-    print("STARTING SSL 512 (ALIGNED)...")
+    print("STARTING SSL 384 (ALIGNED)...")
     for ep in range(CONFIG['ssl_epochs']):
         simmim.train()
         loss_acc = 0
@@ -174,4 +174,5 @@ if __name__ == '__main__':
             pbar.set_postfix({'loss': loss.item() * CONFIG['accum_steps']})
 
         torch.save(simmim.encoder.state_dict(), 'titan_512_aligned_ssl.pth')
+
         print(f"SSL Ep {ep + 1} DONE.")
