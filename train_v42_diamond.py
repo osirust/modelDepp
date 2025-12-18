@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore")
 
 CONFIG = {
     'seed': 3407,
-    'img_size': 512,
+    'img_size': 384,
     'batch_size': 8,
     'accum_steps': 4,
     'ssl_epochs': 150,
@@ -61,7 +61,7 @@ def seed_everything(seed=42):
 
 
 seed_everything(CONFIG['seed'])
-log(f"TITAN-X V42 DIAMOND | 512px | SSL 150ep | Device: {CONFIG['device']}")
+log(f"TITAN-X V42 DIAMOND | 384px | SSL 150ep | Device: {CONFIG['device']}")
 
 
 class GPU_FrequencyGenerator(nn.Module):
@@ -419,4 +419,5 @@ def run_inference():
 if __name__ == '__main__':
     run_ssl_pretrain()
     run_classification()
+
     run_inference()
