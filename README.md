@@ -21,7 +21,7 @@ pip install kornia facenet-pytorch pandas numpy opencv-python tqdm scikit-learn
 
 Шаг 1: Подготовка данных (Face Alignment)
 
-Вырезаем лица и приводим к разрешению 512x512. Скрипт использует MTCNN с "умным кропом" (fallback на центр, если лицо не найдено).
+Вырезаем лица и приводим к разрешению 384x384. Скрипт использует MTCNN с "умным кропом" (fallback на центр, если лицо не найдено).
 
 Bash
 
