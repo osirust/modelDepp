@@ -251,8 +251,8 @@ class DualStreamNetwork(nn.Module):
         self.noise_stem = nn.Sequential(nn.Conv2d(3, 64, 3, 2, 1, bias=False), nn.BatchNorm2d(64), nn.SiLU())
         self.noise_layers = nn.Sequential(self._make_layer(64, 64, 2), self._make_layer(64, 128, 2),
                                           self._make_layer(128, 256, 2))
-        self.fusion = nn.Sequential(nn.Conv2d(512, 512, 1, bias=False), nn.BatchNorm2d(512), nn.SiLU())
-        self.head = nn.Sequential(nn.AdaptiveAvgPool2d(1), nn.Flatten(), nn.Dropout(0.4), nn.Linear(512, 1))
+        self.fusion = nn.Sequential(nn.Conv2d(384, 384, 1, bias=False), nn.BatchNorm2d(384), nn.SiLU())
+        self.head = nn.Sequential(nn.AdaptiveAvgPool2d(1), nn.Flatten(), nn.Dropout(0.4), nn.Linear(384, 1))
 
     def _make_layer(self, in_c, out_c, blocks):
         layers = [ResNestBlock(in_c, out_c, stride=2)]
@@ -475,4 +475,5 @@ avg_th = np.mean(fold_thresholds)
 predictions = (final_probs > avg_th).astype(int)
 submission = pd.DataFrame({'Id': test_ids, 'target_feature': predictions})
 submission.to_csv('submission.csv', index=False)
+
 print(f" Готово! Файл submission.csv создан. Порог: {avg_th}")
