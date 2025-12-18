@@ -12,8 +12,8 @@ SRC_TEST = 'data/dataset/test_images'
 if not os.path.exists(SRC_TRAIN): SRC_TRAIN = 'data/faces_train'
 if not os.path.exists(SRC_TEST): SRC_TEST = 'data/faces_test'
 
-DST_ROOT = 'data/faces_512'
-IMG_SIZE = 512
+DST_ROOT = 'data/faces_384'
+IMG_SIZE = 384
 DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 print(f"FACE ALIGNMENT V42 (SMART CROP) | Device: {DEVICE}")
@@ -96,4 +96,5 @@ def align_dataset(src_dir, dst_dir):
 if __name__ == '__main__':
     align_dataset(SRC_TRAIN, os.path.join(DST_ROOT, 'train'))
     align_dataset(SRC_TEST, os.path.join(DST_ROOT, 'test'))
+
     print("ALIGNMENT COMPLETE. Ready for V42 Training.")
