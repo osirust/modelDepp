@@ -112,6 +112,8 @@ python train_v42_diamond.py
     • v42_backbone_foldX.pth — Финальные веса.
     • submission_v42.csv — Файл для отправки.
 
+ веса модели: https://drive.google.com/file/d/11nOE_Tibyu1CVBTIN6SoPjwFG0kXNauf/view?usp=sharing
+
 ![5](https://github.com/user-attachments/assets/86b288b0-42f0-4f59-a485-072a04772c6b)
 ![4](https://github.com/user-attachments/assets/d56207ec-bcbe-4e17-a73e-6b5a192d42b9)
 ![3](https://github.com/user-attachments/assets/9a1a2397-ef88-454b-bd71-97a417e0cc1c)
