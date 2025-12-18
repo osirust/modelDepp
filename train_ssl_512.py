@@ -133,10 +133,10 @@ class DiskAllImages(Dataset):
         try:
             img = cv2.imread(self.files[i]);
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            if img.shape[0] != 512: img = cv2.resize(img, (512, 512))
+            if img.shape[0] != 384: img = cv2.resize(img, (384, 384))
             return torch.from_numpy(np.transpose(img, (2, 0, 1)))
         except:
-            return torch.zeros((3, 512, 512))
+            return torch.zeros((3, 384, 384))
 
 
 if __name__ == '__main__':
@@ -176,3 +176,4 @@ if __name__ == '__main__':
         torch.save(simmim.encoder.state_dict(), 'titan_512_aligned_ssl.pth')
 
         print(f"SSL Ep {ep + 1} DONE.")
+
