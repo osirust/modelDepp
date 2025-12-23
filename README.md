@@ -111,7 +111,7 @@ Bash
 
 python train_v42_diamond.py
 
-    • Конфигурация: img_size=512, batch_size=8 (virt=32), ssl_epochs=50.
+    • Конфигурация: img_size=384, batch_size=8 (virt=32), ssl_epochs=50.
     
     • Время: ~12-15 часов (SSL + 5 Folds).
     
